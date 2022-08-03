@@ -20,6 +20,9 @@ spec:
     repository: turbonomic
     tag: 8.6.0-SNAPSHOT
     storageClassName: ibmc-vpcblock-odf-ret-general
+    properties:
+      repository:
+        showGuestLoad: true
     #externalIP: 10.0.2.15
     #externalDbIP: 10.0.2.15
     #externalTimescaleDBIP: 10.0.2.15
