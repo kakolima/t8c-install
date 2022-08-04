@@ -11,7 +11,10 @@ spec:
   # Declare variables to be passed into your templates.
 
   # Any changes run : kubectl apply -f deploy/crds/charts_v1alpha1_xl_cr.yaml -n turbonomic
-
+  # Properties section. showGuestLoad: true when you work with Baremetal/SNMP/WMI metrics
+  properties:
+    repository:
+      showGuestLoad: true
   # Global settings
   global:
   #  registry: index.docker.io
