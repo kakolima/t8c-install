@@ -13,6 +13,9 @@ spec:
   # Any changes run : kubectl apply -f deploy/crds/charts_v1alpha1_xl_cr.yaml -n turbonomic
 
   # Global settings
+  properties:
+    repository:
+      showGuestLoad: true
   global:
   #  registry: index.docker.io
   #  imageUsername: turbouser
@@ -20,9 +23,6 @@ spec:
     repository: turbonomic
     tag: 8.6.0-SNAPSHOT
     storageClassName: ibmc-vpcblock-odf-ret-general
-    properties:
-      repository:
-        showGuestLoad: true
     #externalIP: 10.0.2.15
     #externalDbIP: 10.0.2.15
     #externalTimescaleDBIP: 10.0.2.15
