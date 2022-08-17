@@ -21,7 +21,7 @@ spec:
   #  imageUsername: turbouser
   #  imagePassword: turbopassword
     repository: turbonomic
-    tag: 8.6.0-SNAPSHOT
+    tag: 8.6.1
     storageClassName: ibmc-vpcblock-odf-ret-general
     #externalIP: 10.0.2.15
     #externalDbIP: 10.0.2.15
@@ -47,36 +47,36 @@ spec:
     enabled: true
   gcp:
     enabled: true
-#  hpe3par:
-#    enabled: true
-#  horizon:
-#    enabled: false
-#  hyperflex:
-#    enabled: false
-#  hyperv:
-#    enabled: true
-#  ibmstorage-flashsystem:
-#    enabled: true
-#  netapp:
-#    enabled: true
-#  nutanix:
-#    enabled: true
-#  oneview:
-#    enabled: true
-#  pure:
-#    enabled: true
-#  scaleio:
-#    enabled: false
-#  servicenow:
-#    enabled: false
-#  ucs:
-#    enabled: true
-#  vcenter:
-#    enabled: true
-#  vmax:
-#    enabled: true
-#  vmm:
-#    enabled: true
+  hpe3par:
+    enabled: true
+  horizon:
+    enabled: false
+  hyperflex:
+    enabled: false
+  hyperv:
+    enabled: true
+  ibmstorage-flashsystem:
+    enabled: true
+  netapp:
+    enabled: true
+  nutanix:
+    enabled: true
+  oneview:
+    enabled: true
+  pure:
+    enabled: true
+  scaleio:
+    enabled: false
+  servicenow:
+    enabled: true
+  ucs:
+    enabled: true
+  vcenter:
+    enabled: true
+  vmax:
+    enabled: true
+  vmm:
+    enabled: true
   wmi:
     enabled: true
   snmp:
@@ -84,13 +84,13 @@ spec:
   mssql:
     enabled: true
   mysql:
-    enabled: false
+    enabled: true
   oracle:
-    enabled: false
-#  tomcat:
-#    enabled: false
-#  jvm:
-#    enabled: false
+    enabled: true
+  tomcat:
+    enabled: true
+  jvm:
+    enabled: true
   newrelic:
     enabled: true
 #  udt:
@@ -103,5 +103,5 @@ spec:
 #    enabled: false
   instana:
     enabled: true
-#  jboss:
-#    enabled: false
+  jboss:
+    enabled: true
