@@ -3,45 +3,33 @@ kind: Xl
 metadata:
   name: xl-release
 spec:
-  # This configuration file is used for production.
-  # Default values copied from <project_dir>/helm-charts/xl/values.yaml
-
-  # Default values for xl.
-  # This is a YAML-formatted file.
-  # Declare variables to be passed into your templates.
-
   # Any changes run : kubectl apply -f deploy/crds/charts_v1alpha1_xl_cr.yaml -n turbonomic
-  # Properties section. showGuestLoad: true when you work with Baremetal/SNMP/WMI metrics
+  
+  # Properties section.
+  # showGuestLoad: true when you work with Baremetal/SNMP/WMI metrics
   properties:
     repository:
-      showGuestLoad: true
+      showGuestLoad: false
   # Global settings
   global:
   #  registry: index.docker.io
   #  imageUsername: turbouser
   #  imagePassword: turbopassword
     repository: turbonomic
-    tag: 8.6.0-SNAPSHOT
+    tag: 8.6.1
+    # required storageClass be Retain and WaitforFirstConsumer
     storageClassName: ibmc-vpcblock-odf-ret-general
-  #  externalIP: 10.0.2.15
-  #  externalDbIP: 10.0.2.15
-  #  externalTimescaleDBIP: 10.0.2.15
-  #  enableExternalSecrets: true
-
-  grafana:
-  #  # Grafana is disabled by default. To enable it, uncomment:
-    enabled: false
-    adminPassword: admin
-    grafana.ini:
-      database:
-        # Store data in sqlite3 (no persistence across restarts) by default. To persist, uncomment:
-        type: postgres
-        password: grafana
-
+  # remove comments from nginx if you are using OCP
+  #nginx:
+  #  nginxIsPrimaryIngress: false
+  #  httpsRedirect: false
+    #use the following parameters if you would like Turbo to create a single OCP route that will point to the nginx service
+    #openshiftingress:
+    #  enabled: true
+    #nginxingress:
+    #  enabled: true
   # Component selector - Probes
   actionscript:
-    enabled: true
-  actionstream-kafka:
     enabled: true
   appdynamics:
     enabled: true
@@ -52,7 +40,7 @@ spec:
   azure:
     enabled: true
   baremetal:
-    enabled: true
+    enabled: false
   dynatrace:
     enabled: true
   gcp:
@@ -68,21 +56,12 @@ spec:
   ibmstorage-flashsystem:
     enabled: true
   kubeturbo:
-    enabled: true
+    enabled: false
   netapp:
     enabled: true
   nutanix:
     enabled: true
   oneview:
-    enabled: true
-  prometheus-mysql-exporter:
-    enabled: true
-    mysql:
-      user: root
-      pass: vmturbo
-  prometheus:
-    enabled: true
-  prometurbo:
     enabled: true
   pure:
     enabled: true
