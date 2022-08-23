@@ -17,6 +17,9 @@ spec:
   #  imagePassword: turbopassword
     repository: turbonomic
     tag: 8.6.1
+    # securitygroup required for OCP deployments
+    #securityContext:
+    #  fsGroup: 1000690000
     # required storageClass be Retain and WaitforFirstConsumer
     storageClassName: ibmc-vpcblock-odf-ret-general
   # remove comments from nginx if you are using OCP
