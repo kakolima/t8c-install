@@ -7,16 +7,16 @@ spec:
   
   # Properties section.
   # showGuestLoad: true when you work with Baremetal/SNMP/WMI metrics. If you turn on, delete the repository pod to make effect
-  properties:
-    repository:
-      showGuestLoad: false
+  #properties:
+  #  repository:
+  #    showGuestLoad: false
   # Global settings
   global:
   #  registry: index.docker.io
   #  imageUsername: turbouser
   #  imagePassword: turbopassword
     repository: turbonomic
-    tag: 8.6.1
+    tag: 8.6.2
     # securitygroup required for OCP deployments
     #securityContext:
     #  fsGroup: 1000690000
@@ -49,51 +49,51 @@ spec:
   gcp:
     enabled: true
   hpe3par:
-    enabled: true
+    enabled: false
   horizon:
     enabled: false
   hyperflex:
     enabled: false
   hyperv:
-    enabled: true
+    enabled: false
   ibmstorage-flashsystem:
-    enabled: true
+    enabled: false
   kubeturbo:
     enabled: false
   netapp:
-    enabled: true
+    enabled: false
   nutanix:
-    enabled: true
+    enabled: false
   oneview:
-    enabled: true
+    enabled: false
   pure:
-    enabled: true
+    enabled: false
   scaleio:
-    enabled: true
+    enabled: false
   servicenow:
     enabled: true
   ucs:
-    enabled: true
+    enabled: false
   vcenter:
     enabled: true
   vmax:
-    enabled: true
+    enabled: false
   vmm:
     enabled: false
   wmi:
-    enabled: true
+    enabled: false
   snmp:
-    enabled: true
+    enabled: false
   mssql:
-    enabled: true
+    enabled: false
   mysql:
-    enabled: true
+    enabled: false
   oracle:
-    enabled: true
+    enabled: false
   tomcat:
-    enabled: true
+    enabled: false
   jvm:
-    enabled: true
+    enabled: false
   newrelic:
     enabled: true
   udt:
