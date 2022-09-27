@@ -1,0 +1,86 @@
+apiVersion: charts.helm.k8s.io/v1
+kind: Xl
+metadata:
+  name: xl-release
+spec:
+  # Any changes run : kubectl apply -f deploy/crds/charts_v1alpha1_xl_cr.yaml -n turbonomic
+  # Global settings
+  global:
+    repository: turbonomic
+    tag: 8.6.4
+    storageClassName: STORAGE_CLASS_NAME
+  ### Component selector - Probes ###
+  actionscript:
+    enabled: false
+  appdynamics:
+    enabled: true
+  appinsights:
+    enabled: false
+  aws:
+    enabled: true
+  azure:
+    enabled: true
+  baremetal:
+    enabled: false
+  dynatrace:
+    enabled: true
+  gcp:
+    enabled: true
+  hpe3par:
+    enabled: false
+  horizon:
+    enabled: false
+  hyperflex:
+    enabled: false
+  hyperv:
+    enabled: false
+  ibmstorage-flashsystem:
+    enabled: false
+  netapp:
+    enabled: false
+  nutanix:
+    enabled: false
+  oneview:
+    enabled: false
+  pure:
+    enabled: false
+  scaleio:
+    enabled: false
+  servicenow:
+    enabled: false
+  ucs:
+    enabled: false
+  vcenter:
+    enabled: true
+  vmax:
+    enabled: false
+  vmm:
+    enabled: false
+  wmi:
+    enabled: false
+  snmp:
+    enabled: false
+  mssql:
+    enabled: true
+  mysql:
+    enabled: true
+  oracle:
+    enabled: true
+  tomcat:
+    enabled: false
+  jvm:
+    enabled: false
+  newrelic:
+    enabled: false
+  udt:
+    enabled: true
+  websphere:
+    enabled: false
+  weblogic:
+    enabled: false
+  xen:
+    enabled: false
+  instana:
+    enabled: true
+  jboss:
+    enabled: false
