@@ -5,24 +5,32 @@ metadata:
 spec:
   # Any changes run : kubectl apply -f deploy/crds/charts_v1alpha1_xl_cr.yaml -n turbonomic
   
-  # Properties section.
-  # showGuestLoad: true when you work with Baremetal/SNMP/WMI metrics. If you turn on, delete the repository pod to make effect
-  #properties:
+  ### Properties section. ###
+  ### showGuestLoad: true when you work with Baremetal/SNMP/WMI metrics. If you turn on, delete the repository pod to make effect ###
+  properties:
+    global:
+      enableSecureDBConnection: true
+      ### comentar o sqldialect se for MariaDB ###
+      sqlDialect: MYSQL
+      dbPort: 3306
+      dbRootPassword: vmturbo
+      dbRootUsername: senha_do_vmturbo
   #  repository:
   #    showGuestLoad: false
   # Global settings
   global:
+    externalDBName: yourDB.yourURL.com
   #  registry: index.docker.io
   #  imageUsername: turbouser
   #  imagePassword: turbopassword
     repository: turbonomic
-    tag: 8.6.2
-    # securitygroup required for OCP deployments
+    tag: 8.6.4
+    ### securitygroup required for OCP deployments ###
     #securityContext:
     #  fsGroup: 1000690000
-    # required storageClass be Retain and WaitforFirstConsumer
-    storageClassName: ibmc-vpcblock-odf-ret-general
-  # remove comments from nginx if you are using OCP
+    ### required storageClass be Retain and WaitforFirstConsumer ###
+    storageClassName: STORAGE_CLASS_NAME
+  ### remove comments from nginx if you are using OCP ###
   #nginx:
   #  nginxIsPrimaryIngress: false
   #  httpsRedirect: false
@@ -31,13 +39,13 @@ spec:
     #  enabled: true
     #nginxingress:
     #  enabled: true
-  # Component selector - Probes
+  ### Component selector - Probes ###
   actionscript:
-    enabled: true
+    enabled: false
   appdynamics:
-    enabled: true
+    enabled: false
   appinsights:
-    enabled: true
+    enabled: false
   aws:
     enabled: true
   azure:
@@ -45,7 +53,7 @@ spec:
   baremetal:
     enabled: false
   dynatrace:
-    enabled: true
+    enabled: false
   gcp:
     enabled: true
   hpe3par:
@@ -71,7 +79,7 @@ spec:
   scaleio:
     enabled: false
   servicenow:
-    enabled: true
+    enabled: false
   ucs:
     enabled: false
   vcenter:
@@ -95,7 +103,7 @@ spec:
   jvm:
     enabled: false
   newrelic:
-    enabled: true
+    enabled: false
   udt:
     enabled: true
   websphere:
