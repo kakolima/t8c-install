@@ -1,5 +1,5 @@
-kind: Xl
 apiVersion: charts.helm.k8s.io/v1
+kind: Xl
 metadata:
   name: xl-release
   namespace: turbonomic
@@ -7,10 +7,10 @@ spec:
   global:
     customImageNames: false
     repository: registry.connect.redhat.com/turbonomic
-    tag: 8.6.4
+    tag: 8.6.5
     ### securitygroup required for OCP deployments ###
     securityContext:
-      fsGroup: 1000630000
+      fsGroup: 1000640000
     ### required storageClass be Retain and WaitforFirstConsumer ###
     storageClassName: ibmc-vpcblock-odf-ret-general
   ### remove comments from nginx if you are using OCP ###
@@ -88,7 +88,7 @@ spec:
   newrelic:
     enabled: false
   udt:
-    enabled: true
+    enabled: false
   websphere:
     enabled: false
   weblogic:
