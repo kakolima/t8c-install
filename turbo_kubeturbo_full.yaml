@@ -61,15 +61,15 @@ data:
                 "turboServer": "https://<Turbo_server_URL>"
             },
             "restAPIConfig": {
-                "opsManagerUserName": "<Turbo_username>",
+                "opsManagerUserName": "kubeturbo",
                 "opsManagerPassword": "<Turbo_password>"
             }
         },
         "targetConfig": {
-            "targetName":"whateverYouWant"
+            "targetName":"NOME_DO_CLUSTER"
         },
         "HANodeConfig": {
-            "nodeRoles": [ "master"]
+            "nodeRoles": ["master"]
         }
     }
 ---
