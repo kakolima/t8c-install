@@ -7,8 +7,10 @@ Procedimentos para Instalar o Turbonomic em k8s (Se for OCP, NÃO SEGUIR ESTES P
 kubectl create namespace turbonomic
 
 2- Instalar o CRD, Service Account e Role Binding
+
 Se k8s 1.22 ou maior:
 kubectl create -f https://raw.githubusercontent.com/turbonomic/t8c-install/master/operator/config/crd/bases/charts.helm.k8s.io_xls.yaml
+
 Se for k8s de 1.11 a 1.21:
 kubectl create -f https://raw.githubusercontent.com/turbonomic/t8c-install/master/operator/deploy/crds/charts_v1alpha1_xl_crd.yaml
 
