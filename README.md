@@ -3,6 +3,7 @@
 Procedimentos para Instalar o Turbonomic em k8s (Se for OCP, NÃO SEGUIR ESTES PASSOS).
 
 1- Criar um namespace para o Turbonomic
+
 kubectl create namespace turbonomic
 
 2- Instalar o CRD, Service Account e Role Binding
