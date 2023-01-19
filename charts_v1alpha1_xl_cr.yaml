@@ -20,14 +20,9 @@ spec:
   # Global settings
   global:
     externalDBName: yourDB.yourURL.com
-  #  registry: index.docker.io
-  #  imageUsername: turbouser
-  #  imagePassword: turbopassword
-    repository: turbonomic
-    tag: 8.6.4
-    ### securitygroup required for OCP deployments ###
-    #securityContext:
-    #  fsGroup: 1000690000
+    registry: icr.io/cpopen
+    repository: icr.io/cpopen/turbonomic
+    tag: 8.7.5
     ### required storageClass be Retain and WaitforFirstConsumer ###
     storageClassName: STORAGE_CLASS_NAME
   ### remove comments from nginx if you are using OCP ###
