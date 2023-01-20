@@ -6,8 +6,8 @@ spec:
   # Any changes run : kubectl apply -f deploy/crds/charts_v1alpha1_xl_cr.yaml -n turbonomic
   # Global settings
   global:
-    repository: turbonomic
-    tag: 8.6.4
+    repository: icr.io/cpopen/turbonomic
+    tag: 8.7.5
     storageClassName: STORAGE_CLASS_NAME
   ### Component selector - Probes ###
   actionscript:
@@ -73,7 +73,7 @@ spec:
   newrelic:
     enabled: false
   udt:
-    enabled: true
+    enabled: false
   websphere:
     enabled: false
   weblogic:
