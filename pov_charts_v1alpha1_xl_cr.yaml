@@ -15,7 +15,7 @@ spec:
   appdynamics:
     enabled: true
   appinsights:
-    enabled: false
+    enabled: true
   aws:
     enabled: true
   azure:
@@ -51,7 +51,7 @@ spec:
   ucs:
     enabled: false
   vcenter:
-    enabled: true
+    enabled: false
   vmax:
     enabled: false
   vmm:
@@ -61,11 +61,11 @@ spec:
   snmp:
     enabled: false
   mssql:
-    enabled: true
+    enabled: false
   mysql:
-    enabled: true
+    enabled: false
   oracle:
-    enabled: true
+    enabled: false
   tomcat:
     enabled: false
   jvm:
