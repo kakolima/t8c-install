@@ -7,7 +7,7 @@ spec:
   # Global settings
   global:
     repository: icr.io/cpopen/turbonomic
-    tag: 8.7.5
+    tag: 8.8.0
     storageClassName: STORAGE_CLASS_NAME
   ### Component selector - Probes ###
   actionscript:
