@@ -6,8 +6,8 @@ metadata:
 spec:
   global:
     customImageNames: false
-    repository: registry.connect.redhat.com/turbonomic
-    tag: 8.6.5
+    repository: icr.io/cpopen/turbonomic
+    tag: 8.8.0
     ### securitygroup required for OCP deployments ###
     securityContext:
       fsGroup: 1000640000
