@@ -66,7 +66,7 @@ data:
             }
         },
         "targetConfig": {
-            "targetName":"NOME_DO_CLUSTER"
+            "targetName": "NOME_DO_CLUSTER"
         },
         "HANodeConfig": {
             "nodeRoles": ["master"]
