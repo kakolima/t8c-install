@@ -7,7 +7,7 @@ spec:
   global:
     customImageNames: false
     repository: icr.io/cpopen/turbonomic
-    tag: 8.8.0
+    tag: 8.8.6
     ### securitygroup required for OCP deployments ###
     securityContext:
       fsGroup: 1000640000
