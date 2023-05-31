@@ -10,7 +10,7 @@ spec:
     tag: 8.8.6
     ### securitygroup required for OCP deployments ###
     securityContext:
-      fsGroup: 1000640000
+      fsGroup: 1000660000
     ### required storageClass be Retain and WaitforFirstConsumer ###
     storageClassName: ibmc-vpcblock-odf-ret-general
   ### remove comments from nginx if you are using OCP ###
