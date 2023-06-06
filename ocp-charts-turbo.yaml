@@ -7,10 +7,10 @@ spec:
   global:
     customImageNames: false
     repository: icr.io/cpopen/turbonomic
-    tag: 8.9.0
+    tag: 8.9.1
     ### securitygroup required for OCP deployments ###
     securityContext:
-      fsGroup: 1000660000
+      fsGroup: 1000650000
     ### required storageClass be Retain and WaitforFirstConsumer ###
     storageClassName: ibmc-vpcblock-odf-ret-general
   ### remove comments from nginx if you are using OCP ###
