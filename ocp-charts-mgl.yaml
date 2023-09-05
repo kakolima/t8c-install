@@ -1,0 +1,101 @@
+apiVersion: charts.helm.k8s.io/v1
+kind: Xl
+metadata:
+  name: xl-release
+  namespace: turbonomic
+spec:
+  global:
+    customImageNames: false
+    repository: icr.io/cpopen/turbonomic
+    tag: 8.9.7
+    ### securitygroup required for OCP deployments ###
+    securityContext:
+      fsGroup: 1000710000
+    ### required storageClass be Retain and WaitforFirstConsumer ###
+    storageClassName: turbonomic
+  ### remove comments from nginx if you are using OCP ###
+  nginx:
+    nginxIsPrimaryIngress: false
+    httpsRedirect: false
+    #use the following parameters if you would like Turbo to create a single OCP route that will point to the nginx service
+  openshiftingress:
+    enabled: true
+  nginxingress:
+    enabled: true
+  ### Component selector - Probes ###
+  actionscript:
+    enabled: false
+  appdynamics:
+    enabled: true
+  appinsights:
+    enabled: false
+  aws:
+    enabled: true
+  azure:
+    enabled: true
+  baremetal:
+    enabled: false
+  dynatrace:
+    enabled: true
+  gcp:
+    enabled: true
+  hpe3par:
+    enabled: false
+  horizon:
+    enabled: false
+  hyperflex:
+    enabled: false
+  hyperv:
+    enabled: false
+  ibmstorage-flashsystem:
+    enabled: false
+  kubeturbo:
+    enabled: false
+  netapp:
+    enabled: false
+  nutanix:
+    enabled: false
+  oneview:
+    enabled: false
+  pure:
+    enabled: false
+  scaleio:
+    enabled: false
+  servicenow:
+    enabled: true
+  ucs:
+    enabled: false
+  vcenter:
+    enabled: false
+  vmax:
+    enabled: false
+  vmm:
+    enabled: false
+  wmi:
+    enabled: false
+  snmp:
+    enabled: false
+  mssql:
+    enabled: false
+  mysql:
+    enabled: false
+  oracle:
+    enabled: false
+  tomcat:
+    enabled: false
+  jvm:
+    enabled: false
+  newrelic:
+    enabled: true
+  udt:
+    enabled: false
+  websphere:
+    enabled: false
+  weblogic:
+    enabled: false
+  xen:
+    enabled: false
+  instana:
+    enabled: true
+  jboss:
+    enabled: false
