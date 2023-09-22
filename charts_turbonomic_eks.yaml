@@ -4,9 +4,6 @@ metadata:
   name: xl-release
 spec:
   # Any changes run : kubectl apply -f deploy/crds/charts_v1alpha1_xl_cr.yaml -n turbonomic
-  
-  ### Properties section. ###
-  ### showGuestLoad: true when you work with Baremetal/SNMP/WMI metrics. If you turn on, delete the repository pod to make effect ###
   properties:
     global:
       enableSecureDBConnection: true
