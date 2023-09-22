@@ -10,13 +10,43 @@ spec:
   properties:
     global:
       enableSecureDBConnection: true
-      ### comentar o sqldialect se for MariaDB ###
       sqlDialect: MYSQL
       dbPort: 3306
       dbRootPassword: vmturbo
-      dbRootUsername: senha_do_vmturbo
-  #  repository:
-  #    showGuestLoad: false
+      dbRootUsername: turboadmin
+    action-orchestrator:
+      actionDbUsername: action
+      actionDbPassword: vmturbo
+    auth:
+      authDbUsername: auth
+      authDbPassword: vmturbo
+    clustermgr:
+      clustermgrDbUsername: clustermgr
+      clustermgrDbPassword: vmturbo
+    cost:
+      costDbUsername: cost
+      costDbPassword: vmturbo
+    group:
+      groupComponentDbUsername: group_component
+      groupComponentDbPassword: vmturbo
+    history:
+      historyDbUsername: history
+      historyDbPassword: vmturbo
+    market:
+      marketDbUsername: market
+      marketDbPassword: vmturbo 
+    plan-orchestrator:
+      planDbUsername: plan
+      planDbPassword: vmturbo
+    repository:
+      repositoryDbUsername: repository
+      repositoryDbPassword: vmturbo
+    suspend:
+      suspendDbUsername: suspend
+      suspendDbPassword: vmturbo
+    topology-processor:
+      topologyProcessorDbUsername: topology_processor
+      topologyProcessorDbPassword: vmturbo
   # Global settings
   global:
     externalDBName: yourDB.yourURL.com
@@ -24,19 +54,10 @@ spec:
     repository: icr.io/cpopen/turbonomic
     tag: 8.10.1
     ### required storageClass be Retain and WaitforFirstConsumer ###
-    storageClassName: STORAGE_CLASS_NAME
-  ### remove comments from nginx if you are using OCP ###
-  #nginx:
-  #  nginxIsPrimaryIngress: false
-  #  httpsRedirect: false
-    #use the following parameters if you would like Turbo to create a single OCP route that will point to the nginx service
-    #openshiftingress:
-    #  enabled: true
-    #nginxingress:
-    #  enabled: true
+    storageClassName: gp3
   ### Component selector - Probes ###
   actionscript:
-    enabled: false
+    enabled: true
   appdynamics:
     enabled: false
   appinsights:
@@ -47,6 +68,8 @@ spec:
     enabled: true
   baremetal:
     enabled: false
+  datadog:
+    enabled: true
   dynatrace:
     enabled: false
   gcp:
@@ -60,7 +83,7 @@ spec:
   hyperv:
     enabled: false
   ibmstorage-flashsystem:
-    enabled: false
+    enabled: true
   kubeturbo:
     enabled: false
   netapp:
@@ -74,7 +97,7 @@ spec:
   scaleio:
     enabled: false
   servicenow:
-    enabled: false
+    enabled: true
   ucs:
     enabled: false
   vcenter:
@@ -88,11 +111,11 @@ spec:
   snmp:
     enabled: false
   mssql:
-    enabled: false
+    enabled: true
   mysql:
-    enabled: false
+    enabled: true
   oracle:
-    enabled: false
+    enabled: true
   tomcat:
     enabled: false
   jvm:
